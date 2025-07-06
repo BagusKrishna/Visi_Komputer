@@ -56,11 +56,9 @@ with st.expander("🩺 Daftar Penyakit Daun Tomat yang Dapat Deteksi"):
     9. **Tomato Healthy** – Daun sehat tanpa gejala penyakit.
     """)
 
-# =======================
-# LOAD MODELS
-# =======================
 @st.cache_resource
 def load_models():
+    from ultralytics import YOLO  # Import di dalam fungsi, bukan di atas file
     model_yolov8 = YOLO("yolov8s.pt")
     model_yolov9 = YOLO("yolov9s.pt")
     return model_yolov8, model_yolov9
