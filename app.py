@@ -22,13 +22,8 @@ Tomat merupakan salah satu komoditas penting di Indonesia. Namun, tanaman tomat 
 Deteksi dini sangat penting, dan teknologi deep learning seperti **YOLO (You Only Look Once)** sangat efektif untuk tugas ini.
 
 Penelitian kami membandingkan **YOLOv8s** dan **YOLOv9s** menggunakan **dataset penyakit daun tomat dari lingkungan alami**.  
-Model diuji pada **10 kelas penyakit**, di antaranya:
-- Tomato bacterial spot  
-- Tomato early blight  
-- Tomato yellow leaf curl virus  
-- Tomato mosaic virus  
-*(dan lainnya)*
 
+Spesifikasi Model :
 Model YOLOv9s unggul dalam **akurasi dan stabilitas pelatihan**, sementara YOLOv8s unggul dalam **efisiensi waktu pelatihan**.
 
 ### Dikembangkan oleh:
@@ -37,9 +32,6 @@ Model YOLOv9s unggul dalam **akurasi dan stabilitas pelatihan**, sementara YOLOv
 - **Dody Adi Sancoko (1301223071)**
 """)
 
-# =======================
-# PENJELASAN KELAS PENYAKIT
-# =======================
 with st.expander("🩺 Daftar Penyakit Daun Tomat yang Dapat Deteksi"):
     st.markdown("""
     Model mendeteksi **10 kelas** kondisi daun tomat, yaitu:
@@ -55,6 +47,10 @@ with st.expander("🩺 Daftar Penyakit Daun Tomat yang Dapat Deteksi"):
     8. **Tomato Mosaic Virus** – Daun belang hijau-kuning dengan bentuk tak normal.
     9. **Tomato Healthy** – Daun sehat tanpa gejala penyakit.
     """)
+
+# =======================
+# PENJELASAN KELAS PENYAKIT
+# =======================
 
 @st.cache_resource
 def load_models():
